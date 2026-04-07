@@ -99,7 +99,7 @@ def main():
     if args.r:
         logging.info("Running MitoHifi pipeline in reads mode...")
         logging.info("1. First we map your Pacbio HiFi reads to the close-related mitogenome")
-        minimap_cmd = ["minimap2", "-t", str(args.t), "--secondary=no", "-ax", "map-hifi", args.f] + shlex.split(args.r) 
+        minimap_cmd = ["minimap2", "-t", str(args.t), "--secondary=no", "-ax", "map-ont", args.f] + shlex.split(args.r) 
         samtools_cmd = ["samtools", "view", "-@", str(args.t), "-b", "-F4", "-F", "0x800", "-o", "reads.HiFiMapped.bam"] 
         logging.info(" ".join(minimap_cmd) + " | " + " ".join(samtools_cmd))        
         minimap = subprocess.Popen(minimap_cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
