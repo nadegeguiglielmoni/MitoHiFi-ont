@@ -32,10 +32,10 @@ WORKDIR /opt
 RUN curl -L https://github.com/lh3/minimap2/releases/download/v2.24/minimap2-2.24_x64-linux.tar.bz2 \
     | tar -jxvf  - --no-same-owner
 
-# /opt/hifiasm-0.16.1
-RUN curl -L https://github.com/chhylp123/hifiasm/archive/refs/tags/0.16.1.tar.gz \
+# /opt/hifiasm-0.25.0
+RUN curl -L https://github.com/chhylp123/hifiasm/archive/refs/tags/0.25.0.tar.gz \
     | tar -xzvf - \
-    && cd hifiasm-0.16.1 \
+    && cd hifiasm-0.25.0 \
     && make \
     && wget -P /usr/local/src https://bootstrap.pypa.io/pip/2.7/get-pip.py \
     && python2 /usr/local/src/get-pip.py \
