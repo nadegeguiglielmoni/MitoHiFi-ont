@@ -1,4 +1,4 @@
-# MitoHiFi 
+# MitoHiFi (for Nanopore R10.4.1 users)
 
 ------ This is v3.2.2 ------
 
